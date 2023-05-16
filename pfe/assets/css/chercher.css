@@ -1,0 +1,57 @@
+/************************************************************/
+.hidden {
+  display: none;
+}
+.fade-in {
+  opacity: 0;
+  animation-name: fadeInOpacity;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-out {
+  opacity: 1;
+  animation-name: fadeOutOpacity;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutOpacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/****************************************************************************************/
+.input-group{
+  padding: 30px;
+}
+.filter-section{
+  padding-bottom:10px;
+}
+/****************************************************************************************/
+section.resultats {
+  padding-bottom: 20px;
+}
+section.resultats .row {
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+section.resultats .card {
+  background-color: white;
+  
+}
+section.resultats .card :hover {
+  background-color: rgb(122, 122, 122);
+}

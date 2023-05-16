@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut" href="assets/img/brand/favicon.svg" type="image/x-icon" >
+  <!--Boostrap link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!--MY CSS-->
+  <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="assets/css/con_insstyle.css">
+  <title>Inscription</title>
+</head>
+
+<body>
+  
+
+<div class="formulaire sign-in">
+  <form method="POST" action="./back/inscription.php" >
+     
+    <h1 class="text-center">S'inscrire</h1>
+   
+    <p class="message">Entrer vos information :</p>
+
+	<label class="form-label" for="account-type">Type de compte:</label>
+	<select class="form-control" id="account-type" name="typ" onchange="showFields()">
+		<option value="">Choisissez un type de compte</option>
+		<option value="artisan" >Artisan</option>
+		<option value="simple" >Simple</option>
+	</select>
+    <div class="inputs form-group" id="artisan-fields" style="display: none;">
+        
+
+      <label class="form-label" for="nom">Nom</label>
+      <input class="form-control" type="nom" placeholder="nom">
+      
+      <label class="form-label" for="prenom">Prenom</label>
+      <input class="form-control" type="prenom" placeholder="prenom">
+      
+      <label class="form-label" for="pseudo">Pseudo</label>
+      <input class="form-control" type="pseudo" name='NomUser' placeholder="pseudo">
+      
+      <label class="form-label" for="email">Address mail</label>
+      <input class="form-control" type="email" name="email" placeholder="Email">
+      
+      <label class="form-label" for="mdp">Mot de passe</label>
+      <input class="form-control" type="password" name="mdp" placeholder="Mot de passe">
+      
+      <label class="form-label" for="mdp2">Confirmer le mot de passe</label>
+      <input class="form-control" type="password"name="mdp2" placeholder="Confirmer le mot de passe">
+     
+      <label class="form-label" for="numero">Telephone</label>
+      <input class="form-control" type="telephone" name='numero' placeholder="Telephone">
+      <!--les wilaya-->
+      <label class="form-label" for="wilaya">Wilaya</label>
+      <select class="form-control" name="wilaya" id="wilaya">
+        <option value="">-- Sélectionner une wilaya --</option>
+        <option value="adra">Adrar</option>
+        <option value="chlef">Chlef</option>
+        <option value="laghouat">Laghouat</option>
+        <option value="oum_el_bouaghi">Oum El Bouaghi</option>
+        <option value="batna">Batna</option>
+        <option value="bejaia">Béjaïa</option>
+        <option value="biskra">Biskra</option>
+        <option value="bechar">Béchar</option>
+        <option value="blida">Blida</option>
+        <option value="bouira">Bouira</option>
+        <option value="tamanrasset">Tamanrasset</option>
+        <option value="tebessa">Tébessa</option>
+        <option value="tlemcen">Tlemcen</option>
+        <option value="tiaret">Tiaret</option>
+        <option value="tizi_ouzou">Tizi Ouzou</option>
+        <option value="alger">Alger</option>
+        <option value="djelfa">Djelfa</option>
+        <option value="jijel">Jijel</option>
+        <option value="setif">Sétif</option>
+        <option value="saida">Saïda</option>
+        <option value="skikda">Skikda</option>
+        <option value="sidi_bel_abbes">Sidi Bel Abbès</option>
+        <option value="annaba">Annaba</option>
+        <option value="guelma">Guelma</option>
+        <option value="constantine">Constantine</option>
+        <option value="medea">Médéa</option>
+        <option value="mostaganem">Mostaganem</option>
+        <option value="msila">Msila</option>
+        <option value="mascara">Mascara</option>
+        <option value="ouargla">Ouargla</option>
+        <option value="oran">Oran</option>
+        <option value="el_bayadh">El Bayadh</option>
+        <option value="illizi">Illizi</option>
+        <option value="bordj_bou_arreridj">Bordj Bou Arreridj</option>
+        <option value="boumerdes">Boumerdès</option>
+        <option value="el_tarf">El Tarf</option>
+        <option value="tindouf">Tindouf</option>
+        <option value="tissemsilt">Tissemsilt</option>
+        <option value="el_oued">El Oued</option>
+        <option value="khenchela">Khenchela</option>
+        <option value="souk_ahras">Souk Ahras</option>
+        <option value="tipaza">Tipaza</option>
+        <option value="mila">Mila</option>
+        <option value="ain_defla">Aïn Defla</option>
+        <option value="naama">Naâma</option>
+        <option value="ain_temouchent">Aïn Témouchent</option>
+        <option value="ghardaia">Ghardaïa</option>
+        <option value="relizane">Relizane</option>
+        <!-- Ajoutez des options pour chaque wilaya -->
+      </select>
+
+      <label class="form-label" for="Ville">Ville</label>
+      <select class="form-control" name="ville" id="ville" disabled>
+        <option value="">-- Sélectionner une ville --</option>
+        <!-- Les options des villes pour la wilaya sélectionnée seront ajoutées ici par JavaScript -->
+      </select>
+      
+      <label class="form-label" for="adresse">Adresse</label>
+      <input class="form-control" type="adresse" placeholder="Adresse">
+
+      <label class="form-label" for="specialite">Specialité</label>
+      <select id="specialite" name="specialite" class="form-control"  placeholder="Choisissez votre métier" onchange="afficherAutre()">
+        <option value= "0" >-- Sélectionner un service --</option>
+        <option value="plombier" >plombier</option>
+        <option value="mécanicien" >mécanicien</option>
+        <option value="électricien" >électricien</option>
+        <option value="jardinier" >jardinier</option>
+        <option value="maçon" >maçon</option>
+        <option value="menuisier" >menuisier</option>
+        <option value="Peintre" >Peintre</option>
+        <option value="Carreleur" >Carreleur</option>
+        <option value="Chauffagiste" >Chauffagiste</option>
+        <option value="cuisiniste" >cuisiniste</option>
+        <option value="Vitrier" >Vitrier</option>
+        <option value="autre" >Autre</option>
+      </select>
+      <div id="divAutre" style="display:none;">
+        <label class="form-label" for="pro_autre_metier">Autre spécialité :</label>
+        <input type="text" id="pro_autre_metier" name="pro_autre_metier" class="form-control">
+      </div>
+      <button class="btn btn-success w-100" type="submit">S'inscrire</button>
+    </div>
+    <div class="form-group" id="simple-fields" style="display: none;">
+      <label class="form-label" for="email2">Email:</label>
+      <input class="form-control" type="email" id="email2" name="email2"><br>
+      <label class="form-label" for="pseudo">Pseudo:</label>
+      <input class="form-control" type="text" id="pseudo" name="pseudo"><br>
+      <label class="form-label" for="password">Mot de passe:</label>
+      <input class="form-control" type="password" id="password" name="password"><br>
+      <label class="form-label" for="confirm-password">Confirmation du mot de passe:</label>
+      <input class="form-control" type="password" id="confirm-password" name="confirm-password"><br>
+      
+        <button class="btn btn-success w-100" type="submit" >S'inscrire</button>
+      
+
+    </div>
+      
+    
+  </form>
+</div>
+
+
+
+ 
+</body>
+</html>
+
+
+
+
+<script>
+function afficherAutre() {
+  var selectBox = document.getElementById("specialite");
+  var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+  var divAutre = document.getElementById("divAutre");
+
+  if (selectedValue == "autre") {
+    divAutre.style.display = "block";
+  } else {
+    divAutre.style.display = "none";
+  }
+}
+  const villesParWilaya = {
+    "adra": ["Adrar", "Reggane", "Timimoun", "Tit"],
+        "chlef": ["Chlef", "El Karimia", "Ouled Fares", "Sendjas"],
+        "laghouat": ["Laghouat", "Brida", "Gueltat Sidi Saad", "Ksar El Hirane"],
+        "oum_el_bouaghi": ["Ain Beida", "Ain Mlila", "Ksar Sbahi", "Meskiana"],
+        "batna": ["Batna", "Arris", "Barika", "Merouana"],
+        "bejaia": ["Béjaïa", "Akfadou", "El Kseur", "Seddouk"],
+        "biskra": ["Biskra", "El Kantara", "El Outaya", "M'chouneche"],
+        "bechar": ["Béchar", "Abadla", "Beni Abbès", "Taghit"],
+        "blida": ["Blida", "Boufarik", "Chréa", "El Affroun"],
+        "bouira": ["Bouira", "Aomar", "El Hachimia", "Lakhdaria"],
+        "tamanrasset": ["Tamanrasset", "Idles", "In Ghar", "Tazrouk"],
+        "tebessa": ["Tébessa", "Bir Mokadem", "Bir El Ater", "Negrine"],
+        "tlemcen": ["Tlemcen", "Ain Fezza", "Bab El Assa", "Maghnia"],
+        "tiaret": ["Tiaret", "Ain Bouchekif", "Frenda", "Ksar Chellala"],
+        "tizi_ouzou": ["Tizi Ouzou", "Azazga", "Draa El Mizan", "Tigzirt"],
+        "alger": ["Alger", "Bab Ezzouar", "Bordj El Kiffan", "Rouiba"],
+        "djelfa": ["Djelfa", "Ain El Ibel", "El Guedid", "Moudjebara"],
+        "jijel": ["Jijel", "El Aouana", "El Milia", "Taher"],
+        "setif": ["Sétif", "Ain Oulmene", "Bir El Arch", "El Eulma"],
+        "saida": ["Saïda", "Ain El Hadjar", "Doui Thabet", "El Hassasna"],
+        "skikda": ["Skikda", "Ain Zouit", "Beni Oulbane", "El Harrouch"],
+        "sidi_bel_abbes": ["Sidi Bel Abbès", "Ben Badis", "Mostghanèm"],
+        "annaba": ["Annaba", "Berrahal", "El Hadjar", "Seraïdi"],
+        "guelma": ["Guelma", "Bouati Mahmoud", "El Fedjoudj Boughrara Sa", "Héliopolis"],
+        "constantine": ["Constantine", "Ain Smara", "Beni Hamidane", "Zighoud Youcef"],
+        "medea": ["Médéa", "Aïn Boucif", "Aïn Ouksir", "Chellalet El Adhaoura"],
+        "mostaganem": ["Mostaganem", "Ain Nouissy", "Hassi Mameche", "Kheir Eddine"],
+        "m'sila": ["M'Sila", "Ain El Hadjel", "Ain Fares", "Tarmount"],
+        "mascara": ["Mascara", "Aouf", "El Hachem", "Ghriss"],
+        "ouargla": ["Ouargla", "El Hadjira", "Hassi Ben Abdellah", "N'goussa"],
+        "oran": ["Oran", "Arzew", "Bir El Djir", "Es Senia"],
+        "el_bayadh": ["El Bayadh", "Boualem", "Ghassoul", "Rogassa"],
+        "illizi": ["Illizi", "Djanet", "In Aménas", "In Salah"],
+        "bordj_bou_arreridj": ["Bordj Bou Arreridj", "Aïn Taghrout", "Ben Daoud", "El M'hir"],
+        "boumerdes": ["Boumerdès", "Boudouaou", "Corso", "Djinet"],
+        "el_taref": ["El Taref", "Asfour", "Bougous", "El Kala"],
+        "tindouf": ["Tindouf", "Oum El Assel", "Ouled Mimoun", "Tindouf"],
+        "tissemsilt": ["Tissemsilt", "Ammari", "Bordj Bounaama", "Larbaa"],
+        "el_oued": ["El Oued", "El Ogla", "Guemar", "Reguiba"],
+        "khenchela": ["Khenchela", "Ain Touila", "Bouhmama", "El Hamma"],
+        "souk_aahrass": ["Souk Ahras", "Ain Kerma", "Bir Bouhouche", "Ouled Driss"],
+        "tipaza": ["Tipaza", "Bourkika", "Gouraya", "Sidi Amar"],
+        "milaa": ["Mila", "Ain Beida Harriche", "Ain Mellouk", "Bouhatem"],
+        "ain_defla": ["Ain Defla", "Ain Lechiakh", "El Attaf", "Tarik Ibn Ziad"],
+        "naama": ["Naâma", "Ain Sefra", "Mecheria", "Sfissifa"],
+        "ain_temouchent": ["Ain Temouchent", "Ain Kihal", "El Amria", "Oued Berkeche"],
+        "ghardaia": ["Ghardaïa", "Bounoura", "El Meniaa", "Zelfana"],
+        "relizane":[ "Rélizane","Mazouna","Yellel","Oued Rhiou","El Matmar"]
+    };
+    // Ajoutez des entrées pour chaque wilaya et ses villes correspondantes
+
+
+  const wilaya = document.querySelector('#wilaya');
+  const ville = document.querySelector('#ville');
+
+  wilaya.addEventListener('change', () => {
+    const selectedWilaya = wilaya.value;
+
+    // Effacer les options précédentes de ville
+    ville.innerHTML = '<option value="">-- Sélectionner une ville --</option>';
+
+    // Ajouter les options des villes correspondant à la wilaya sélectionnée
+    if (selectedWilaya) {
+      const villes = villesParWilaya[selectedWilaya];
+      villes.forEach((villeNom) => {
+        const option = document.createElement('option');
+        option.value = villeNom;
+        option.textContent = villeNom;
+        ville.appendChild(option);
+      });
+
+      // Activer la liste déroulante des villes
+      ville.disabled = false;
+    } else {
+      // Désactiver la liste déroulante des villes si aucune wilaya n'est sélectionnée
+      ville.disabled = true;
+    }
+  });
+  function showFields() {
+			var accountType = document.getElementById("account-type").value;
+			if (accountType == "artisan") {
+				document.getElementById("artisan-fields").style.display = "block";
+				document.getElementById("simple-fields").style.display = "none";
+			} else if (accountType == "simple") {
+				document.getElementById("artisan-fields").style.display = "none";
+				document.getElementById("simple-fields").style.display = "block";
+			}
+		}
+
+</script>

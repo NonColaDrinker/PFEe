@@ -1,0 +1,328 @@
+/*-----------------------------------------------------
+Fronts setup
+------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@1,800&display=swap');
+/*-----------------------------------------------------
+COLOR setup 
+------------------------------------------------------*/
+
+  
+  
+.rating {
+
+    display: inline-block;
+    vertical-align: middle;
+    direction: ltr; /* make stars fill from left to right */
+  }
+  
+  .rating input[type="radio"] {
+    display: none;
+  }
+  
+  .rating label {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/Empty_Star.svg');
+    background-repeat: no-repeat;
+  }
+  
+  .rating label:hover,
+  .rating label:hover ~ label {
+    background-image: url('../img/filled-star.svg');
+    background-repeat: no-repeat;
+  }
+
+
+#dec:hover{
+    background-color: #1383D1;
+    border: 1px solid #1383D1;
+    color: var(--gray-2);
+    transition: background-color 0.75s ease;
+}
+#dec2:hover{
+    background-color: #1383D1;
+    border: 1px solid #1383D1;
+    color: var(--gray-2);
+    transition: background-color 0.75s ease;
+}
+/*
+background-color: var(--gray-2);
+border: 1px solid var(--gray-2);
+color: var(--black);
+
+*/  
+:root {
+   --primaty:#3155e7;
+   --primary-dark:#2045d6;
+   --black:#010101;
+   --gray-1:#788190;
+   --gray-2: #d3d4db;
+   --white:#FFFFFF;
+   --body:#fefefe;
+   --dark-blue:#103473;
+   --gray-3:#5a5a5a;
+}
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color:var(--body) ;
+}
+/*-----------------------------------------------------
+setup components
+------------------------------------------------------*/
+
+/* botton*/
+.btn {
+    border-radius: 8px;
+}
+.btn-primary,
+.btn-outline-secondary {
+    padding:11px 14px;
+}
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--primary-dark);
+}
+.btn-primary :hover {
+    background-color: var(--primary-dark);
+    color: var(--primaty);
+}
+.btn-outline-secondary {
+ border:1px solid var(--gray-2);
+ color:var(--black);
+}
+.btn-outline-secondary :hover{
+    background-color: var(--gray-2);
+    border: 1px solid var(--gray-2);
+    color: var(--black);
+}
+.btn-outline-secondary :focus{
+    background-color: var(--gray-2);
+    border: 1px solid var(--gray-2);
+    color: var(--black);
+}
+.btn-secondary{
+    background-color: var(--gray-2);
+    border: 1px solid var(--gray-2);
+    color: var(--dark-blue);
+    transition: background-color 0.75s ease;
+}
+.btn-secondary:hover{
+    background-color: var(--gray-3);
+    border: 1px solid var(--gray-3);
+    color: var(--gray-2);
+}
+/*-------------------------------
+navbar
+----------------------------------------*/
+.navbar .btn-outliine-secondary{
+    border:1px solid var(--gray-2);
+    color:var(--balck);
+    font-size:14px;
+    font-weight:500;
+    line-height: 20px;
+    padding: 10px 16px;
+}
+.navbar {
+    padding:32px 0;
+}
+.nav-link{
+    margin-left: 41px;
+    font-size:16px;
+    color:var(--gray-1);
+}
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color:var(--black);
+}
+/*-------------------------------
+hero section
+----------------------------------------*/
+section.hero  {
+    padding:80px 0;
+
+}
+section.hero .text {
+    font-weight: 800;
+    font-size: 48px;
+    line-height:73px;
+    color: var(--black);
+}
+.buttons{
+    padding-top: 70px;
+}
+.buttons .btn {
+    font-size:16px;
+    font-weight:bold;
+    line-height: 24px;
+}
+/*-------------------------------
+cards section
+----------------------------------------*/
+section.cards .text-header h3 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--black);
+}
+section.cards .text-header p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--gray-1);
+    padding: 27px 0; 
+}
+/*section.cards h5 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--black);
+    padding-bottom: 18px ;
+}*/
+section.cards .desc p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+    color:var(--gray-1);
+    max-width: 284px;
+    margin: 0 auto;
+}
+.buttons-1{
+    padding-top: 35px;
+}
+.card{
+    background-color: var(--dark-blue);
+    color: var(--gray-2);
+}
+/*-------------------------------
+setup section
+----------------------------------------*/
+section.setup{
+    padding: 287px 0;
+}
+section.setup .text-header h3 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--black);
+}
+section.setup .text-header p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--gray-1);
+    padding: 27px 0; 
+}
+section.setup .icons{
+    padding:27px 0;
+}
+section.setup h5 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--black);
+    padding-bottom: 18px ;
+}
+section.setup .desc p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+    color:var(--gray-1);
+    max-width: 284px;
+    margin: 0 auto;
+}
+/*-------------------------------
+information section
+----------------------------------------*/
+section.information .text-information{
+    padding: 134px 0;
+}
+section.information h5 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--black);
+}
+section.information p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: var(--gray-1);
+    padding-top: 30px;
+}
+section.text-information .info-1{
+    padding: 183px 0;
+}
+/*-------------------------------
+footer section
+----------------------------------------*/
+footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+}
+footer a {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    color: var(--black);
+}
+footer .copy{
+margin-top: 32px;
+font-size:14;
+color: var(--gray-1);
+line-height: 17px;
+font-weight: 400;}
+
+/*-------------------------------
+respensive section
+----------------------------------------*/
+@media (max-width: 576px){
+    section.hero,
+    section.setup,
+    section.information{
+        text-align: center;
+    }
+    
+    /*-------------------------------
+navbar
+----------------------------------------*/
+.navbar{
+    padding: 20px 0;
+}
+.nav-link{
+    margin-left: 0;
+}
+    /*-------------------------------
+hero section
+----------------------------------------*/
+section.hero img {
+    padding-top: 2.5rem;
+}
+section.hero .text {
+font-weight: 800;
+font-size: 38px;
+line-height: 53px;
+}
+.buttons .btn {
+    display: block;
+    margin: 1rem 0;
+}
+.buttons .ms-3{
+    margin-left: 0 !important;
+}
+/*-------------------------------
+setup section
+----------------------------------------*/
+section.setup{
+    padding: 50px 0;
+}
+/*-------------------------------
+footer
+----------------------------------------*/
+footer {
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+}
